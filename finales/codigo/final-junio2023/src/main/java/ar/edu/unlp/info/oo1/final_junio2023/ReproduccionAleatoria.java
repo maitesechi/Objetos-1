@@ -7,7 +7,7 @@ import java.util.List;
 public class ReproduccionAleatoria implements Reproduccion{
 	
 	public List<Cancion> ordenar(List<Cancion> canciones){
-		List<Cancion> orden = new ArrayList<Cancion>();
+		List<Cancion> orden = new ArrayList<Cancion>(canciones);
 		Collections.shuffle(orden);
 		return orden;
 	}

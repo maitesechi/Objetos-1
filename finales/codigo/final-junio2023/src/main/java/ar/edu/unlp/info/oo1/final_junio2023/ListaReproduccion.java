@@ -19,8 +19,8 @@ public class ListaReproduccion {
 		this.estrategia = estrategia;
 	}
 	
-	public void reproducir() {
-		this.estrategia.ordenar(canciones);
+	public List<Cancion> reproducir() {
+		return this.estrategia.ordenar(canciones);
 	}
 	
 	public void agregarCancion(Cancion cancion) {
@@ -35,6 +35,10 @@ public class ListaReproduccion {
 	
 	public void agregarAlbum(Album album) {
 		this.canciones.addAll(album.getCanciones());
+	}
+	
+	public List<Cancion> getCanciones(){
+		return this.canciones;
 	}
 
 }
